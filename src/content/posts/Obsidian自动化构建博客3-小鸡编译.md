@@ -12,6 +12,17 @@ draft: false
 slug: "20260319010003"
 ---
 
+# 走过的弯路
+[Obsidian自动化构建博客1-梦开始的地方](Obsidian自动化构建博客1-梦开始的地方.md)
+[Obsidian自动化构建博客2-迁移Astro](Obsidian自动化构建博客2-迁移Astro.md)
+[Obsidian自动化构建博客3-小鸡编译](Obsidian自动化构建博客3-小鸡编译.md)
+[Obsidian自动化构建博客4-小鸡监控仓库](Obsidian自动化构建博客4-小鸡监控仓库.md)
+[Obsidian自动化构建博客5-本地编译同步VPS](Obsidian自动化构建博客5-本地编译同步VPS.md)
+[Obsidian自动化构建博客6-插入图片](Obsidian自动化构建博客6-插入图片.md)
+[Obsidian自动化构建博客7-总结和插件配置](Obsidian自动化构建博客7-总结和插件配置.md)
+[Obsidian自动化构建博客8-最终章](Obsidian自动化构建博客8-最终章.md)
+
+
 > [!TIP]
 > 转念一想，瞎鸡鸡折腾什么 GitHub action 私有 repo 到公有 repo 再到 Cloudflare，我直接小鸡鸡上部署 Caddy + Cloudflared，在小鸡鸡上编译不就完事儿了么。开始折腾
 

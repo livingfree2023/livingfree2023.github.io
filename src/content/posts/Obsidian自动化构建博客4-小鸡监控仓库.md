@@ -12,6 +12,17 @@ draft: false
 slug: "20260319010004"
 ---
 
+# 走过的弯路
+[Obsidian自动化构建博客1-梦开始的地方](Obsidian自动化构建博客1-梦开始的地方.md)
+[Obsidian自动化构建博客2-迁移Astro](Obsidian自动化构建博客2-迁移Astro.md)
+[Obsidian自动化构建博客3-小鸡编译](Obsidian自动化构建博客3-小鸡编译.md)
+[Obsidian自动化构建博客4-小鸡监控仓库](Obsidian自动化构建博客4-小鸡监控仓库.md)
+[Obsidian自动化构建博客5-本地编译同步VPS](Obsidian自动化构建博客5-本地编译同步VPS.md)
+[Obsidian自动化构建博客6-插入图片](Obsidian自动化构建博客6-插入图片.md)
+[Obsidian自动化构建博客7-总结和插件配置](Obsidian自动化构建博客7-总结和插件配置.md)
+[Obsidian自动化构建博客8-最终章](Obsidian自动化构建博客8-最终章.md)
+
+
 > [!TIP]
 > 我的整个 vault 本来都在 github 上，我其实完全可以放弃本地环境。在 vps 直接拉取我的 vault 但是只对里面的 GitBlog 目录进行编译，好像是个办法，开始折腾
 

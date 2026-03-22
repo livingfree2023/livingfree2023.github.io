@@ -11,6 +11,17 @@ draft: false
 slug: "20260319010002"
 ---
 
+# 走过的弯路
+[Obsidian自动化构建博客1-梦开始的地方](Obsidian自动化构建博客1-梦开始的地方.md)
+[Obsidian自动化构建博客2-迁移Astro](Obsidian自动化构建博客2-迁移Astro.md)
+[Obsidian自动化构建博客3-小鸡编译](Obsidian自动化构建博客3-小鸡编译.md)
+[Obsidian自动化构建博客4-小鸡监控仓库](Obsidian自动化构建博客4-小鸡监控仓库.md)
+[Obsidian自动化构建博客5-本地编译同步VPS](Obsidian自动化构建博客5-本地编译同步VPS.md)
+[Obsidian自动化构建博客6-插入图片](Obsidian自动化构建博客6-插入图片.md)
+[Obsidian自动化构建博客7-总结和插件配置](Obsidian自动化构建博客7-总结和插件配置.md)
+[Obsidian自动化构建博客8-最终章](Obsidian自动化构建博客8-最终章.md)
+
+
 > [!TIP]
 > Nodeseek 上看到有人说 Hexo 过时了，现在用 astro 更好。我一想，反正我写作是 markdown 啊，迁移成本应该远小于 ghost - wordpress 之类的，只要换个编译期就行了，于是开始折腾
 
