@@ -12,15 +12,15 @@ slug: "20260319010003"
 ---
 ![](https://image.heavenroad.org/resources/Pasted%20image%2020260322210335.png)
 
-## 走过的弯路
-[Obsidian自动化构建博客1-梦开始的地方](Obsidian自动化构建博客1-梦开始的地方.md)
-[Obsidian自动化构建博客2-迁移Astro](Obsidian自动化构建博客2-迁移Astro.md)
-[Obsidian自动化构建博客3-小鸡编译](Obsidian自动化构建博客3-小鸡编译.md)
-[Obsidian自动化构建博客4-小鸡监控仓库](Obsidian自动化构建博客4-小鸡监控仓库.md)
-[Obsidian自动化构建博客5-本地编译同步VPS](Obsidian自动化构建博客5-本地编译同步VPS.md)
-[Obsidian自动化构建博客6-插入图片](Obsidian自动化构建博客6-插入图片.md)
-[Obsidian自动化构建博客7-总结和插件配置](Obsidian自动化构建博客7-总结和插件配置.md)
-[Obsidian自动化构建博客8-最终章](Obsidian自动化构建博客8-最终章.md)
+> 走过的弯路
+> [Obsidian自动化构建博客1-梦开始的地方](Obsidian自动化构建博客1-梦开始的地方.md)
+> [Obsidian自动化构建博客2-迁移Astro](Obsidian自动化构建博客2-迁移Astro.md)
+> [Obsidian自动化构建博客3-小鸡编译](Obsidian自动化构建博客3-小鸡编译.md)
+> [Obsidian自动化构建博客4-小鸡监控仓库](Obsidian自动化构建博客4-小鸡监控仓库.md)
+> [Obsidian自动化构建博客5-本地编译同步VPS](Obsidian自动化构建博客5-本地编译同步VPS.md)
+> [Obsidian自动化构建博客6-插入图片](Obsidian自动化构建博客6-插入图片.md)
+> [Obsidian自动化构建博客7-总结和插件配置](Obsidian自动化构建博客7-总结和插件配置.md)
+> [Obsidian自动化构建博客8-最终章](Obsidian自动化构建博客8-最终章.md)
 
 
 > [!TIP]

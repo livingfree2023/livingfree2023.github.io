@@ -1,7 +1,6 @@
 ---
 title: Obsidian自动化构建博客8-最终章
 category: Blog
-description: ""
 tags:
   - GitBlog
   - Obsidian
@@ -11,15 +10,16 @@ draft: false
 ---
 ![](https://image.heavenroad.org/resources/Pasted%20image%2020260322205640.png)
 
-## 走过的弯路
-[Obsidian自动化构建博客1-梦开始的地方](Obsidian自动化构建博客1-梦开始的地方.md)
-[Obsidian自动化构建博客2-迁移Astro](Obsidian自动化构建博客2-迁移Astro.md)
-[Obsidian自动化构建博客3-小鸡编译](Obsidian自动化构建博客3-小鸡编译.md)
-[Obsidian自动化构建博客4-小鸡监控仓库](Obsidian自动化构建博客4-小鸡监控仓库.md)
-[Obsidian自动化构建博客5-本地编译同步VPS](Obsidian自动化构建博客5-本地编译同步VPS.md)
-[Obsidian自动化构建博客6-插入图片](Obsidian自动化构建博客6-插入图片.md)
-[Obsidian自动化构建博客7-总结和插件配置](Obsidian自动化构建博客7-总结和插件配置.md)
-[Obsidian自动化构建博客8-最终章](Obsidian自动化构建博客8-最终章.md)
+
+> 走过的弯路
+> [Obsidian自动化构建博客1-梦开始的地方](Obsidian自动化构建博客1-梦开始的地方.md)
+> [Obsidian自动化构建博客2-迁移Astro](Obsidian自动化构建博客2-迁移Astro.md)
+> [Obsidian自动化构建博客3-小鸡编译](Obsidian自动化构建博客3-小鸡编译.md)
+> [Obsidian自动化构建博客4-小鸡监控仓库](Obsidian自动化构建博客4-小鸡监控仓库.md)
+> [Obsidian自动化构建博客5-本地编译同步VPS](Obsidian自动化构建博客5-本地编译同步VPS.md)
+> [Obsidian自动化构建博客6-插入图片](Obsidian自动化构建博客6-插入图片.md)
+> [Obsidian自动化构建博客7-总结和插件配置](Obsidian自动化构建博客7-总结和插件配置.md)
+> [Obsidian自动化构建博客8-最终章](Obsidian自动化构建博客8-最终章.md)
 
 
 > [!TIP]
@@ -29,7 +29,7 @@ draft: false
 > Obsidian Git Push **Vault** - **Vault** Action 监控 Push 到 **Fuwari** - Cloudflare Pages 自动编译同时发布。
 > 本地插件可以删除 Shell Commands
 
-### 核心架构
+## 核心架构
 
 1. **私有仓库 (Source)**：存放完整的 Obsidian Vault。
     
@@ -41,7 +41,7 @@ draft: false
 
 ---
 
-### 第一步：获取 GitHub 访问令牌 (PAT)
+## 第一步：获取 GitHub 访问令牌 (PAT)
 
 为了让私有仓库有权“写”数据到网站仓库，需要生成一个 **Fine-grained Personal Access Token**：
 
@@ -57,7 +57,7 @@ draft: false
 
 ---
 
-### 第二步：配置自动同步工作流
+## 第二步：配置自动同步工作流
 
 在私有 Obsidian 仓库根目录下创建 `.github/workflows/deploy.yml` 文件：
 
@@ -94,7 +94,7 @@ jobs:
 
 ---
 
-### 第三步：Cloudflare Pages 部署设置
+## 第三步：Cloudflare Pages 部署设置
 
 1. 在 Cloudflare 仪表板选择 **Workers & Pages > Create application > Pages > Connect to Git**。
     
