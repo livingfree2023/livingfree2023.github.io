@@ -6,24 +6,13 @@ tags:
   - GitBlog
 published: 2026-03-20T13:27:00+08:00
 draft: false
-#slug: "20260320132700"
+slug: "20260320132700"
+image: https://image.heavenroad.org/resources/Pasted%20image%2020260322205858.png
 ---
-!()[https://image.heavenroad.org/resources/Pasted%20image%2020260322205858.png]
 
-> 走过的弯路
-> [Obsidian自动化构建博客1-梦开始的地方](Obsidian自动化构建博客1-梦开始的地方.md)
-> [Obsidian自动化构建博客2-迁移Astro](Obsidian自动化构建博客2-迁移Astro.md)
-> [Obsidian自动化构建博客3-小鸡编译](Obsidian自动化构建博客3-小鸡编译.md)
-> [Obsidian自动化构建博客4-小鸡监控仓库](Obsidian自动化构建博客4-小鸡监控仓库.md)
-> [Obsidian自动化构建博客5-本地编译同步VPS](Obsidian自动化构建博客5-本地编译同步VPS.md)
-> [Obsidian自动化构建博客6-插入图片](Obsidian自动化构建博客6-插入图片.md)
-> [Obsidian自动化构建博客7-总结和插件配置](Obsidian自动化构建博客7-总结和插件配置.md)
-> [Obsidian自动化构建博客8-最终章](Obsidian自动化构建博客8-最终章.md)
+## Obsidian 中直接插入图片
 
-
-### Obsidian 中直接插入图片
-
-#### Take 1
+### Take 1
 先用 ob 内配置 *Files and link* - *Default Location* - *Subfolder* 试试看
 直接复制粘贴
 
@@ -59,6 +48,5 @@ draft: false
 
 搞了个插件 obsidian://show-plugin?id=file-cleaner-redux 用它清楚多余的文件，先手动配置包含的文件 `.jpg, .png, .gif`
 试试看
-
 
 成功！

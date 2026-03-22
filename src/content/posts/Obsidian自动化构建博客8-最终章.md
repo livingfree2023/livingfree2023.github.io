@@ -5,22 +5,10 @@ tags:
   - GitBlog
   - Obsidian
 published: 2026-03-22T20:37:00+08:00
-#slug: "20260322203700"
+slug: "20260322203700"
 draft: false
+image: https://image.heavenroad.org/resources/Pasted%20image%2020260322205640.png
 ---
-![](https://image.heavenroad.org/resources/Pasted%20image%2020260322205640.png)
-
-
-> 走过的弯路
-> [Obsidian自动化构建博客1-梦开始的地方](Obsidian自动化构建博客1-梦开始的地方.md)
-> [Obsidian自动化构建博客2-迁移Astro](Obsidian自动化构建博客2-迁移Astro.md)
-> [Obsidian自动化构建博客3-小鸡编译](Obsidian自动化构建博客3-小鸡编译.md)
-> [Obsidian自动化构建博客4-小鸡监控仓库](Obsidian自动化构建博客4-小鸡监控仓库.md)
-> [Obsidian自动化构建博客5-本地编译同步VPS](Obsidian自动化构建博客5-本地编译同步VPS.md)
-> [Obsidian自动化构建博客6-插入图片](Obsidian自动化构建博客6-插入图片.md)
-> [Obsidian自动化构建博客7-总结和插件配置](Obsidian自动化构建博客7-总结和插件配置.md)
-> [Obsidian自动化构建博客8-最终章](Obsidian自动化构建博客8-最终章.md)
-
 
 > [!TIP]
 > 我用了两天感觉还是不妥，因为怕被墙，所以服务器还是套了 CF CDN，看了下 CF 的节点分配的是西雅图，好家伙，请求绕美国再到亚洲，恢复也要绕美国再回中国。一个请求要飞四趟太平洋…… 于是想了个新方法，Vault 里面加 action 监控 blog 目录，把变动 push 到一个新的 fuwari 仓库。然后用 CF Page 去编译然后直接呈现。整个过程极简，也不需要本地有环境了。更关键的是手机 Obsidian+GitSync 也可以编辑和触发了！

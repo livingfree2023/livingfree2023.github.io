@@ -7,22 +7,9 @@ tags:
   - Obsidian
 published: 2026-03-20T12:00:00+08:00
 draft: false
-#slug: "20260319010005"
+slug: "20260319010005"
+image: https://image.heavenroad.org/resources/Pasted%20image%2020260322210022.png
 ---
-
-![](https://image.heavenroad.org/resources/Pasted%20image%2020260322210022.png)
-
-
-> 走过的弯路
-> [Obsidian自动化构建博客1-梦开始的地方](Obsidian自动化构建博客1-梦开始的地方.md)
-> [Obsidian自动化构建博客2-迁移Astro](Obsidian自动化构建博客2-迁移Astro.md)
-> [Obsidian自动化构建博客3-小鸡编译](Obsidian自动化构建博客3-小鸡编译.md)
-> [Obsidian自动化构建博客4-小鸡监控仓库](Obsidian自动化构建博客4-小鸡监控仓库.md)
-> [Obsidian自动化构建博客5-本地编译同步VPS](Obsidian自动化构建博客5-本地编译同步VPS.md)
-> [Obsidian自动化构建博客6-插入图片](Obsidian自动化构建博客6-插入图片.md)
-> [Obsidian自动化构建博客7-总结和插件配置](Obsidian自动化构建博客7-总结和插件配置.md)
-> [Obsidian自动化构建博客8-最终章](Obsidian自动化构建博客8-最终章.md)
-
 
 > [!TIP]
 > 我的整个 vault 有私人信息。如果在 vps 直接拉取我的 vault，万一这台被黑了，我整个就炸了。不行不行。还有个问题，如果我修改 Vault 内其他文件，总是会触发 Github Action，这也太麻烦了。

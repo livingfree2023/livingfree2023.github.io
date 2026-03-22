@@ -8,21 +8,9 @@ tags:
   - Workflow
 published: 2026-03-20T11:00:00+08:00
 draft: false
-#slug: "20260319010004"
+slug: "20260319010004"
+image: https://image.heavenroad.org/resources/Pasted%20image%2020260322210153.png
 ---
-![](https://image.heavenroad.org/resources/Pasted%20image%2020260322210153.png)
-
-> 走过的弯路
-> [Obsidian自动化构建博客1-梦开始的地方](Obsidian自动化构建博客1-梦开始的地方.md)
-> [Obsidian自动化构建博客2-迁移Astro](Obsidian自动化构建博客2-迁移Astro.md)
-> [Obsidian自动化构建博客3-小鸡编译](Obsidian自动化构建博客3-小鸡编译.md)
-> [Obsidian自动化构建博客4-小鸡监控仓库](Obsidian自动化构建博客4-小鸡监控仓库.md)
-> [Obsidian自动化构建博客5-本地编译同步VPS](Obsidian自动化构建博客5-本地编译同步VPS.md)
-> [Obsidian自动化构建博客6-插入图片](Obsidian自动化构建博客6-插入图片.md)
-> [Obsidian自动化构建博客7-总结和插件配置](Obsidian自动化构建博客7-总结和插件配置.md)
-> [Obsidian自动化构建博客8-最终章](Obsidian自动化构建博客8-最终章.md)
-
-
 
 > [!TIP]
 > 我的整个 vault 本来都在 github 上，我其实完全可以放弃本地环境。在 vps 直接拉取我的 vault 但是只对里面的 GitBlog 目录进行编译，好像是个办法，开始折腾
@@ -40,7 +28,7 @@ draft: false
 
 ---
 
-### 1。架构逻辑：双层目录结构
+## 1。架构逻辑：双层目录结构
 
 假设你的 Vault 路径是 `/var/www/my-vault`，而 Fuwari 模板安装在 `/var/www/fuwari-app`。
 
@@ -53,7 +41,7 @@ draft: false
 
 ---
 
-### 2。VPS 一次性初始化脚本
+## 2。VPS 一次性初始化脚本
 
 在你的 Debian VPS 上执行以下操作：
 
@@ -76,7 +64,7 @@ ln -s /var/www/my-vault/GitBlog src/content/posts
 
 ---
 
-### 3。自动化部署脚本 (`deploy.sh`)
+## 3。自动化部署脚本 (`deploy.sh`)
 
 在 VPS 上创建一个脚本，由 GitHub Action 远程触发：
 
@@ -98,7 +86,7 @@ pnpm run build
 
 ---
 
-### 4。这种方案的 3 个绝妙之处
+## 4。这种方案的 3 个绝妙之处
 
 1. **真正的 " 所见即所得 "**：你在手机或 iPad 上用 Obsidian 修改了 `GitBlog` 里的文件并 Push，VPS 收到指令后立刻编译。
     
@@ -108,7 +96,7 @@ pnpm run build
 
 ---
 
-### 5。配合 Cloudflare Tunnel 反代
+## 5。配合 Cloudflare Tunnel 反代
 
 既然你用 Debian，建议直接用 **Caddy** 配合 Tunnel，这是目前最省心的组合：
 
@@ -134,7 +122,7 @@ Code snippet
 
 ---
 
-### 💡 给你的一个小提醒
+## 💡 给你的一个小提醒
 
 - **图片路径**：如果你的 Obsidian 笔记里有图片，记得在 `GitBlog` 目录下建立一个 `assets` 文件夹。在 Fuwari 的 `src/content/config.ts` 中，确保图片引用路径是兼容的。
     
