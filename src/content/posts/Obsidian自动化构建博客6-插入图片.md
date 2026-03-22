@@ -4,11 +4,11 @@ description: ""
 category: Blog
 tags:
   - GitBlog
-image: "https://image.heavenroad.org/resources/Pasted%20image%2020260322205858.png"
 published: 2026-03-20T13:27:00+08:00
 draft: false
 slug: "20260320132700"
 ---
+!()[https://image.heavenroad.org/resources/Pasted%20image%2020260322205858.png]
 
 ## 走过的弯路
 [Obsidian自动化构建博客1-梦开始的地方](Obsidian自动化构建博客1-梦开始的地方.md)

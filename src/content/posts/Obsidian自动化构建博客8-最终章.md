@@ -5,11 +5,11 @@ description: ""
 tags:
   - GitBlog
   - Obsidian
-image: "https://image.heavenroad.org/resources/Pasted%20image%2020260322205640.png"
 published: 2026-03-22T20:37:00+08:00
 slug: "20260322203700"
 draft: false
 ---
+![](https://image.heavenroad.org/resources/Pasted%20image%2020260322205640.png)
 
 ## 走过的弯路
 [Obsidian自动化构建博客1-梦开始的地方](Obsidian自动化构建博客1-梦开始的地方.md)

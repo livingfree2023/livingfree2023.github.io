@@ -1,16 +1,16 @@
 ---
 title: Obsidian自动化构建博客7-总结和插件配置
-description: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fyfeotfo54id6ajn29871.png"
+description: ""
 category: Blog
 tags:
   - Obsidian
   - GitBlog
-image: "https://image.heavenroad.org/resources/Pasted%20image%2020260322205756.png"
+image: 
 published: 2026-03-20T14:37:00+08:00
 draft: false
 slug: "20260320143700"
 ---
-
+![](https://image.heavenroad.org/resources/Pasted%20image%2020260322205756.png)
 
 
 ## 走过的弯路
