@@ -1,5 +1,26 @@
 @tailwind components;
 
+:root {
+  /* 基础字体栈：优先使用华文仿宋，针对不同系统提供替代方案 */
+  --font-base: "STFangsong", "STSong", "华文仿宋", "仿宋", "FangSong", "FangSong_GB2312", serif;
+  
+  /* 如果你希望标题使用更现代的黑体 */
+  --font-heading: "HiraKakuProN-W6", "PingFang SC", "Microsoft YaHei", sans-serif;
+
+  font-size: 22px !important;
+}
+
+/* 强制应用到 Markdown 正文 */
+.prose, .markdown-body {
+  font-family: var(--font-base);
+  font-variant-ligatures: common-ligatures;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-size: var(--content-font-size);
+  /* 配合大字号，行高建议同步微调，避免行间距过窄 */
+  line-height: 1.2 !important;
+}
+
 @layer components {
     .card-base {
         @apply rounded-[var(--radius-large)] overflow-hidden bg-[var(--card-bg)] transition;
@@ -149,4 +170,73 @@
         color: var(--codeblock-bg);
     }
   }
+}
+
+
+
+/* 针对大号正文，手动调低标题的倍率 */
+.prose h1, .markdown-body h1 {
+  font-size: 2.25rem !important; /* 约 36px - 40px */
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.prose h2, .markdown-body h2 {
+  font-size: 1.75rem !important; /* 约 28px - 30px */
+  border-bottom: 1px solid var(--primary-color-light);
+  padding-bottom: 0.3rem;
+}
+
+.prose h3, .markdown-body h3 {
+  font-size: 1.4rem !important; /* 约 24px - 25px，仅比正文略大 */
+}
+
+/* 针对仿宋体的加粗优化 */
+.prose h1, .prose h2, .prose h3 {
+  font-weight: 600;
+  /* 标题如果太细不好看，可以切换回系统黑体增加辨识度 */
+  font-family: var(--font-heading); 
+}
+
+/* 针对内容页那个带 Pagefind 标记的顶级标题 */
+div[data-pagefind-meta="title"].text-3xl {
+  /* 将桌面端的 2.25rem (36px) 调小到约 1.75rem (28px) 或 1.5rem (24px) */
+  font-size: 1.75rem !important; 
+  line-height: 2.25rem !important;
+  /* 既然正文是仿宋，标题建议也统一，或者用更稳重的黑体 */
+  font-family: var(--font-heading) !important;
+  letter-spacing: -0.01em;
+  margin-bottom: 1.5rem !important;
+}
+
+/* 移动端适配：防止在手机上依然过大 */
+@media (max-width: 768px) {
+  div[data-pagefind-meta="title"].text-3xl {
+    font-size: 1.5rem !important; /* 约 24px */
+    line-height: 2rem !important;
+  }
+}
+
+/* 针对首页列表的文章标题链接 */
+a.text-3xl[data-astro-cid-iyiqi2so] {
+  /* 将 30px (3xl) 降低到约 22px - 24px (xl 到 2xl 之间) */
+  font-size: 1.3rem !important; 
+  line-height: 2rem !important;
+  /* 调整标题与下方描述的间距 */
+  margin-bottom: 0.75rem !important;
+}
+
+/* 修正左侧彩色竖条的位置，因为字号变小了，竖条的 top 值也需要对齐 */
+@media (min-width: 768px) {
+  a.text-3xl[data-astro-cid-iyiqi2so]::before {
+    /* 原本是 35px，根据新字号调整为约 28px 左右使其垂直居中 */
+    top: 45px !important; 
+    height: 1.5rem !important; /* 缩短一点竖条长度 */
+  }
+}
+
+
+a.text-3xl[data-astro-cid-iyiqi2so] {
+  font-family: var(--font-heading) !important;
+  font-weight: 500 !important;
 }
