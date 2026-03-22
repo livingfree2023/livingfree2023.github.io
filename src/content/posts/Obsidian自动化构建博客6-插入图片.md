@@ -4,13 +4,13 @@ description: ""
 category: Blog
 tags:
   - GitBlog
-image: ""
+image: "https://image.heavenroad.org/resources/Pasted%20image%2020260322205858.png"
 published: 2026-03-20T13:27:00+08:00
 draft: false
 slug: "20260320132700"
 ---
 
-# 走过的弯路
+## 走过的弯路
 [Obsidian自动化构建博客1-梦开始的地方](Obsidian自动化构建博客1-梦开始的地方.md)
 [Obsidian自动化构建博客2-迁移Astro](Obsidian自动化构建博客2-迁移Astro.md)
 [Obsidian自动化构建博客3-小鸡编译](Obsidian自动化构建博客3-小鸡编译.md)
@@ -21,17 +21,12 @@ slug: "20260320132700"
 [Obsidian自动化构建博客8-最终章](Obsidian自动化构建博客8-最终章.md)
 
 
-## Obsidian 中直接插入图片
+### Obsidian 中直接插入图片
 
-### Take 1
+#### Take 1
 先用 ob 内配置 *Files and link* - *Default Location* - *Subfolder* 试试看
 直接复制粘贴
 
-
-ob 内显示
-```
-![Pasted image 20260320105053](resources/Pasted%20image%2020260320105053.png)
-```
 在 posts 下新增了一个 resources 目录图片名称包含空格，现在 push 试试看
 
 …….
@@ -56,7 +51,7 @@ ob 内显示
 
 七牛这个域名设置让我想再试试 *Image Upload Toolkit* ，加 custom domain 看看……
 
-![Gemini Generated Image 13hnrg13hnrg13hn](https://image.heavenroad.org/resources/Gemini_Generated_Image_13hnrg13hnrg13hn.png)
+![](https://image.heavenroad.org/Gemini_Generated_Image_13hnrg13hnrg13hn.png)
 
 啊成功了，这个插件的逻辑是全部写完 markdown 以后通过 publish command 执行，并非粘贴的时候直接执行。而且如果 markdown 中有任意一张图片引用无法找到对象，插件就会停止运行，导致最后失败。刚才前面 5 张图片都成功，最后一张不成功（因为 markdown 中引用了一个不存在的图片，没想到刚才是因为这个）。
 

@@ -5,11 +5,13 @@ tags:
   - Obsidian
   - Workflow
 category: Blog
+image: :"https://image.heavenroad.org/Cover.png"
 description: 本文分享如何搭建一套源码私有化、编译云端化、写作原生化的个人博客系统，实现「本地只管写，云端自动发」的极致体验。
 published: 2026-03-19T17:00:00+08:00
 draft: false
 slug: "20260319010001"
 ---
+
 
 ## 走过的弯路
 [Obsidian自动化构建博客1-梦开始的地方](Obsidian自动化构建博客1-梦开始的地方.md)

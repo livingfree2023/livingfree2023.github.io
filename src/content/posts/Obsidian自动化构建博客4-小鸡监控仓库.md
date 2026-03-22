@@ -6,13 +6,13 @@ tags:
   - GitBlog
   - Obsidian
   - Workflow
-image: ""
+image: "https://image.heavenroad.org/resources/Pasted%20image%2020260322210153.png"
 published: 2026-03-20T11:00:00+08:00
 draft: false
 slug: "20260319010004"
 ---
 
-# 走过的弯路
+## 走过的弯路
 [Obsidian自动化构建博客1-梦开始的地方](Obsidian自动化构建博客1-梦开始的地方.md)
 [Obsidian自动化构建博客2-迁移Astro](Obsidian自动化构建博客2-迁移Astro.md)
 [Obsidian自动化构建博客3-小鸡编译](Obsidian自动化构建博客3-小鸡编译.md)
