@@ -8,20 +8,21 @@ tags:
   - Workflow
   - Blog
 draft: false
-slug: "20260319010002"
+#slug: "20260319010002"
 ---
 ![](https://image.heavenroad.org/resources/Pasted%20image%2020260322210444.png)
 
 
 > 走过的弯路
-> [Obsidian自动化构建博客1-梦开始的地方](Obsidian自动化构建博客1-梦开始的地方.md)
-> [Obsidian自动化构建博客2-迁移Astro](Obsidian自动化构建博客2-迁移Astro.md)
-> [Obsidian自动化构建博客3-小鸡编译](Obsidian自动化构建博客3-小鸡编译.md)
-> [Obsidian自动化构建博客4-小鸡监控仓库](Obsidian自动化构建博客4-小鸡监控仓库.md)
-> [Obsidian自动化构建博客5-本地编译同步VPS](Obsidian自动化构建博客5-本地编译同步VPS.md)
-> [Obsidian自动化构建博客6-插入图片](Obsidian自动化构建博客6-插入图片.md)
-> [Obsidian自动化构建博客7-总结和插件配置](Obsidian自动化构建博客7-总结和插件配置.md)
-> [Obsidian自动化构建博客8-最终章](Obsidian自动化构建博客8-最终章.md)
+>
+> - [Obsidian自动化构建博客1-梦开始的地方](Obsidian自动化构建博客1-梦开始的地方.md)
+> - [Obsidian自动化构建博客2-迁移Astro](Obsidian自动化构建博客2-迁移Astro.md)
+> - [Obsidian自动化构建博客3-小鸡编译](Obsidian自动化构建博客3-小鸡编译.md)
+> - [Obsidian自动化构建博客4-小鸡监控仓库](Obsidian自动化构建博客4-小鸡监控仓库.md)
+> - [Obsidian自动化构建博客5-本地编译同步VPS](Obsidian自动化构建博客5-本地编译同步VPS.md)
+> - [Obsidian自动化构建博客6-插入图片](Obsidian自动化构建博客6-插入图片.md)
+> - [Obsidian自动化构建博客7-总结和插件配置](Obsidian自动化构建博客7-总结和插件配置.md)
+> - [Obsidian自动化构建博客8-最终章](Obsidian自动化构建博客8-最终章.md)
 
 
 > [!TIP]
@@ -32,11 +33,11 @@ slug: "20260319010002"
 
 ---
 
-### 核心迁移策略：原地替换，内容至上
+## 核心迁移策略：原地替换，内容至上
 
 最稳妥的迁移方法是**原地替换**，即在原有的 Git 目录下，清理 Hexo 引擎，注入 Astro 引擎，但必须**确保文章源码 (Markdown) 绝对安全**。
 
-#### 迁移前的目录结构 (Hexo npm 模式)
+### 迁移前的目录结构 (Hexo npm 模式)
 ```text
 GitBlog/
 ├── .git/                <-- 必须保留，连接远程仓库
@@ -50,16 +51,16 @@ GitBlog/
 
 ---
 
-### 实战演练：五步完成“换脑”手术
+## 实战演练：五步完成“换脑”手术
 
-#### Step 1：备份文章源码 (资产保全)
+### Step 1：备份文章源码 (资产保全)
 在进行任何删除操作前，先把文章拷贝到安全的地方：
 ```bash
 # 假设你当前在父目录
 mkdir -p ./temp_posts && cp -r ./GitBlog/source/_posts/* ./temp_posts/
 ```
 
-#### Step 2：清理旧引擎 (暴力拆解)
+### Step 2：清理旧引擎 (暴力拆解)
 进入项目目录，除了 `.git` 文件夹，清理其余所有 Hexo 相关文件：
 ```bash
 cd ~/obsidian_vault/GitBlog
@@ -67,7 +68,7 @@ cd ~/obsidian_vault/GitBlog
 rm -rf source themes scaffolds _config.yml _config.butterfly.yml package.json package-lock.json node_modules db.json
 ```
 
-#### Step 3：初始化 Astro (旁路注入)
+### Step 3：初始化 Astro (旁路注入)
 由于 Astro 脚本默认不接受非空目录，我们需要先在一个临时文件夹里初始化，再搬运回来：
 ```bash
 # 1. 回到父目录，在临时文件夹里初始化 Astro Blog 模板
@@ -82,7 +83,7 @@ cp -rn ./astro-temp/ ./GitBlog/
 rm -rf ./astro-temp
 ```
 
-#### Step 4：适配 Front Matter & 搬回文章
+### Step 4：适配 Front Matter & 搬回文章
 Astro 默认的文章路径在 `src/content/blog/`。
 
 1.  **搬回文章**：
@@ -110,7 +111,7 @@ Astro 默认的文章路径在 `src/content/blog/`。
     });
     ```
 
-#### Step 5：本地预览与验证
+### Step 5：本地预览与验证
 ```bash
 cd GitBlog
 npm install
@@ -120,7 +121,7 @@ npm run dev
 
 ---
 
-### 云端 CI/CD 换脑：GitHub Actions 适配
+## 云端 CI/CD 换脑：GitHub Actions 适配
 
 由于引擎更换，原本的 `deploy.yml` 需要彻底重写。Astro 的编译产物在 `dist/`，我们需要用 `npm run build` 替换 `hexo g`。
 
@@ -186,11 +187,11 @@ jobs:
 
 ---
 
-### 扫尾工作：仓库改名与 Obsidian 优化
+## 扫尾工作：仓库改名与 Obsidian 优化
 
 为了更清晰地表达，我将远程源码仓库改名为 `static-blog-source`。
 
-#### 5.1 本地与 Submodule 同步
+### 5.1 本地与 Submodule 同步
 ```bash
 # 1. 更新本地 Git 远程地址
 cd GitBlog
@@ -202,7 +203,7 @@ cd ..
 git submodule sync
 ```
 
-#### 5.2 Obsidian 侧边栏正则过滤 (File Explorer++)
+### 5.2 Obsidian 侧边栏正则过滤 (File Explorer++)
 由于 Astro 的目录结构复杂，我们需要更新正则过滤，让侧边栏只显示文章目录：
 **Hide Filter：**
 ```regex
@@ -211,7 +212,7 @@ git submodule sync
 
 ---
 
-### 避坑
+## 避坑
 
 1. Hexo 迁移过来 front-matter 内要用 category 而不是 categories！
 2. 还有发布日期等，最好全部从模板中复制到 templater
