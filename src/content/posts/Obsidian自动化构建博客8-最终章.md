@@ -1,12 +1,13 @@
 ---
 title: Obsidian自动化构建博客8-最终章
-category:
+category: Blog
 description: ""
 tags:
   - GitBlog
+  - Obsidian
 image: ""
-published: 260322T05:59:35+08:00
-slug: "260322050309"
+published: 2026-03-22T20:37:00+08:00
+slug: "20260322203700"
 draft: false
 ---
 
