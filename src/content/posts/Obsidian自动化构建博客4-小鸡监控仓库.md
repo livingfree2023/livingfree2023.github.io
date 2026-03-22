@@ -8,7 +8,7 @@ tags:
   - Workflow
 published: 2026-03-20T11:00:00+08:00
 draft: false
-slug: "20260319010004"
+#slug: "20260319010004"
 image: https://image.heavenroad.org/resources/Pasted%20image%2020260322210153.png
 ---
 
@@ -35,7 +35,6 @@ image: https://image.heavenroad.org/resources/Pasted%20image%2020260322210153.pn
 - **仓库 A (Vault)**：包含你的笔记、日记和 `GitBlog/posts`。
     
 - **仓库 B (Fuwari)**：纯粹的程序代码。
-    
 
 **核心技巧：**我们把 Fuwari 的 `src/content/posts` 目录直接软链接到 Vault 里的 `GitBlog`。这样，每当 Vault 更新，Fuwari 看到的 " 源码 " 也就更新了。
 

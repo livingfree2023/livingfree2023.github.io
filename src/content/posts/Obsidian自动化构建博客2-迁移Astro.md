@@ -9,10 +9,8 @@ tags:
   - Blog
 draft: false
 image: https://image.heavenroad.org/resources/Pasted%20image%2020260322210444.png
-slug: "20260319010002"
+#slug: "20260319010002"
 ---
-
-
 
 > [!TIP]
 > Nodeseek 上看到有人说 Hexo 过时了，现在用 astro 更好。我一想，反正我写作是 markdown 啊，迁移成本应该远小于 ghost - wordpress 之类的，只要换个编译期就行了，于是开始折腾
