@@ -7,13 +7,13 @@ tags:
   - Ghost
   - Gemini
 published: 2026-03-20T18:30:00+08:00
-slug: "260320220315"
+#slug: "260320220315"
 draft: false
+image: https://image.heavenroad.org/157849205-aa24152c-4610-4d7d-b752-3a8c4f9319e6.png
 ---
 
 > [!NOTE]
 > 因为有几百个帖子写在 Ghost 上，没有办法导入到 wordpress，今天折腾好了 astro 后，本来想复制粘贴 ghost 中的 vps 相关帖子过来，结果灵机一动索性让 gemini 教我如何导出所有的帖子和视频图片。正好 ghost 新版本有一个 API 的功能，gemini 真给力，10 分钟就解决了。以下是让 gemini 总结的。（前几天试图让 gemini 帮我恢复一个 ghost 的 compose.yml，虽然失败了，但是莫名其妙的把 ghost 升级到了最新版，于是才有了 apikey，也算是歪打正着、因祸得福、无心插柳柳成荫、塞翁失马，焉知非福……）
-
 
 这是一份针对 Ghost 博客自动化迁移至 Obsidian（或任何支持 YAML Front-matter 的 Markdown 环境）的最终技术方案。该方案实现了 **文章筛选**、**元数据保留** 以及 **多媒体资源（图片、MP3、MP4）本地化**。
 
@@ -24,8 +24,6 @@ draft: false
 ### 1. 环境准备
 
 在 MacOS 终端中创建一个新文件夹，并安装必要的依赖库：
-
-
 
 ```bash
 mkdir ghost-export && cd ghost-export
@@ -41,7 +39,6 @@ npm install axios cheerio minimist @tryghost/content-api turndown
 - **特定格式 Front-matter**：严格遵循你要求的 YAML 结构。
     
 - **媒体自动处理**：自动扫描并下载 `img`、`audio`、`video` 标签资源至 `resource` 目录。
-
 
 ```javascript
 const GhostContentAPI = require('@tryghost/content-api');
@@ -170,8 +167,6 @@ startExport();
 ### 3. 如何使用
 
 在终端执行以下命令即可：
-
-
 
 ```bash
 # 例子：只导出标签为 VPS 的文章及其媒体

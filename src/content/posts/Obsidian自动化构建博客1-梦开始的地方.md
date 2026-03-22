@@ -8,8 +8,16 @@ category: Blog
 description: 本文分享如何搭建一套源码私有化、编译云端化、写作原生化的个人博客系统，实现「本地只管写，云端自动发」的极致体验。
 published: 2026-03-19T17:00:00+08:00
 draft: false
-slug: "20260319010001"
+image: https://image.heavenroad.org/Cover.png
+#slug: "20260319010001"
 ---
+
+> 走过的弯路：2-5 其实不用看全是弯路
+>
+> - [Obsidian自动化构建博客6-插入图片](Obsidian自动化构建博客6-插入图片.md)
+> - [Obsidian自动化构建博客7-总结和插件配置](Obsidian自动化构建博客7-总结和插件配置.md)
+> - [Obsidian自动化构建博客8-最终章](Obsidian自动化构建博客8-最终章.md)
+
 ## Obsidian 自动化构建博客 1。梦开始的地方
 
 > [!TIP]

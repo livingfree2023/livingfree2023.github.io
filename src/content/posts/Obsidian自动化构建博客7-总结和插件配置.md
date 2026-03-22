@@ -5,10 +5,10 @@ category: Blog
 tags:
   - Obsidian
   - GitBlog
-image: ""
 published: 2026-03-20T14:37:00+08:00
 draft: false
-slug: "20260320143700"
+#slug: "20260320143700"
+image: https://image.heavenroad.org/resources/Pasted%20image%2020260322205756.png
 ---
 
 ## 目录环境
@@ -26,10 +26,9 @@ slug: "20260320143700"
 3. 执行 `File Cleaner Dux: Clean files` , 因为 resource 下粘贴的文件不再被任何文件引用，可以用这个插件删除（尽量在这个步骤之后执行 git 同步）
 
 ## 关键设置
-![](https://image.heavenroad.org/resources/Pasted%20image%2020260321230001.png)
+![](https://image.heavenroad.org/Pasted%20image%2020260321230001.png)
 
 这个设置影响所有的图片路径，图片上传 R2 之后会在 bucket 里面自动建一个 resource 目录，未来所有的链接都会包含 resource，不要轻易改动。
-
 
 ## Templater
 

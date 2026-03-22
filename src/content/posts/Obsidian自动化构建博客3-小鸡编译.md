@@ -6,10 +6,10 @@ tags:
   - GitBlog
   - Obsidian
   - Workflow
-image: ""
 published: 2026-03-20T10:00:00+08:00
 draft: false
-slug: "20260319010003"
+image: https://image.heavenroad.org/resources/Pasted%20image%2020260322210335.png
+#slug: "20260319010003"
 ---
 
 > [!TIP]

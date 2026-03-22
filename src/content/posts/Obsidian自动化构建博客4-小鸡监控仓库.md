@@ -6,10 +6,10 @@ tags:
   - GitBlog
   - Obsidian
   - Workflow
-image: ""
 published: 2026-03-20T11:00:00+08:00
 draft: false
-slug: "20260319010004"
+#slug: "20260319010004"
+image: https://image.heavenroad.org/resources/Pasted%20image%2020260322210153.png
 ---
 
 > [!TIP]
@@ -28,20 +28,19 @@ slug: "20260319010004"
 
 ---
 
-### 1。架构逻辑：双层目录结构
+## 1。架构逻辑：双层目录结构
 
 假设你的 Vault 路径是 `/var/www/my-vault`，而 Fuwari 模板安装在 `/var/www/fuwari-app`。
 
 - **仓库 A (Vault)**：包含你的笔记、日记和 `GitBlog/posts`。
     
 - **仓库 B (Fuwari)**：纯粹的程序代码。
-    
 
 **核心技巧：**我们把 Fuwari 的 `src/content/posts` 目录直接软链接到 Vault 里的 `GitBlog`。这样，每当 Vault 更新，Fuwari 看到的 " 源码 " 也就更新了。
 
 ---
 
-### 2。VPS 一次性初始化脚本
+## 2。VPS 一次性初始化脚本
 
 在你的 Debian VPS 上执行以下操作：
 
@@ -64,7 +63,7 @@ ln -s /var/www/my-vault/GitBlog src/content/posts
 
 ---
 
-### 3。自动化部署脚本 (`deploy.sh`)
+## 3。自动化部署脚本 (`deploy.sh`)
 
 在 VPS 上创建一个脚本，由 GitHub Action 远程触发：
 
@@ -86,7 +85,7 @@ pnpm run build
 
 ---
 
-### 4。这种方案的 3 个绝妙之处
+## 4。这种方案的 3 个绝妙之处
 
 1. **真正的 " 所见即所得 "**：你在手机或 iPad 上用 Obsidian 修改了 `GitBlog` 里的文件并 Push，VPS 收到指令后立刻编译。
     
@@ -96,7 +95,7 @@ pnpm run build
 
 ---
 
-### 5。配合 Cloudflare Tunnel 反代
+## 5。配合 Cloudflare Tunnel 反代
 
 既然你用 Debian，建议直接用 **Caddy** 配合 Tunnel，这是目前最省心的组合：
 
@@ -122,7 +121,7 @@ Code snippet
 
 ---
 
-### 💡 给你的一个小提醒
+## 💡 给你的一个小提醒
 
 - **图片路径**：如果你的 Obsidian 笔记里有图片，记得在 `GitBlog` 目录下建立一个 `assets` 文件夹。在 Fuwari 的 `src/content/config.ts` 中，确保图片引用路径是兼容的。
     
