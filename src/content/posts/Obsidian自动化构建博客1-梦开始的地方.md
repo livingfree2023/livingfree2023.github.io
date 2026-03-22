@@ -14,16 +14,17 @@ slug: "20260319010001"
 
 
 > 走过的弯路
-> [Obsidian自动化构建博客1-梦开始的地方](Obsidian自动化构建博客1-梦开始的地方.md)
-> [Obsidian自动化构建博客2-迁移Astro](Obsidian自动化构建博客2-迁移Astro.md)
-> [Obsidian自动化构建博客3-小鸡编译](Obsidian自动化构建博客3-小鸡编译.md)
-> [Obsidian自动化构建博客4-小鸡监控仓库](Obsidian自动化构建博客4-小鸡监控仓库.md)
-> [Obsidian自动化构建博客5-本地编译同步VPS](Obsidian自动化构建博客5-本地编译同步VPS.md)
-> [Obsidian自动化构建博客6-插入图片](Obsidian自动化构建博客6-插入图片.md)
-> [Obsidian自动化构建博客7-总结和插件配置](Obsidian自动化构建博客7-总结和插件配置.md)
-> [Obsidian自动化构建博客8-最终章](Obsidian自动化构建博客8-最终章.md)
+>
+> - [Obsidian自动化构建博客1-梦开始的地方](Obsidian自动化构建博客1-梦开始的地方.md)
+> - [Obsidian自动化构建博客2-迁移Astro](Obsidian自动化构建博客2-迁移Astro.md)
+> - [Obsidian自动化构建博客3-小鸡编译](Obsidian自动化构建博客3-小鸡编译.md)
+> - [Obsidian自动化构建博客4-小鸡监控仓库](Obsidian自动化构建博客4-小鸡监控仓库.md)
+> - [Obsidian自动化构建博客5-本地编译同步VPS](Obsidian自动化构建博客5-本地编译同步VPS.md)
+> - [Obsidian自动化构建博客6-插入图片](Obsidian自动化构建博客6-插入图片.md)
+> - [Obsidian自动化构建博客7-总结和插件配置](Obsidian自动化构建博客7-总结和插件配置.md)
+> - [Obsidian自动化构建博客8-最终章](Obsidian自动化构建博客8-最终章.md)
 
-### Obsidian 自动化构建博客 1。梦开始的地方
+## Obsidian 自动化构建博客 1。梦开始的地方
 
 > [!TIP]
 > Obsidian + Git 使用了一段时间非常丝滑，想着折腾一下 Github Pages 或许能直接从 Obsidian 发布到一个静态博客？NS 上看到有个 Hexo+butterfly 主题很漂亮，于是就开始折腾。
@@ -31,7 +32,7 @@ slug: "20260319010001"
 > [!NOTE]
 > Obsidian Git - Submodule - Github Repo - Github Action - Github Public Repo - Cloudflare Page
 
-#### 1。架构设计
+### 1。架构设计
 
 - **Obsidian**：作为全能笔记库，通过 **Git Submodule** 嵌入博客源码。
 - **GitHub 私有仓库**：存放 Hexo 配置文件及 Markdown 原稿，确保创作隐私。
@@ -40,16 +41,16 @@ slug: "20260319010001"
 
 ---
 
-#### 2。自动化部署配置 (CI/CD)
+### 2。自动化部署配置 (CI/CD)
 
-##### 2.1 建立 SSH 信任链
+#### 2.1 建立 SSH 信任链
 为了让 GitHub Actions 自动向公共仓库推送代码，需配置 SSH 密钥：
 
 1.  **生成密钥对**：`ssh-keygen -t rsa -b 4096 -f github-deploy-key`。
 2.  **公共仓库设置**：进入 `username.github.io` > **Settings** > **Deploy keys**，添加公钥内容，并勾选 **Allow write access**。
 3.  **私有仓库设置**：进入 `hexo-blog-source` > **Settings** > **Secrets**，添加私钥内容，命名为 `HEXO_DEPLOY_PRI`。
 
-##### 2.2 编写自动化脚本
+#### 2.2 编写自动化脚本
 在私有仓库根目录下创建 `.github/workflows/deploy.yml`：
 
 ```yaml
@@ -87,9 +88,9 @@ jobs:
 
 ---
 
-#### 3。深度集成 Obsidian
+### 3。深度集成 Obsidian
 
-##### 3.1 引入子模块
+#### 3.1 引入子模块
 将博客源码仓库作为子模块嵌入你的 Obsidian 库中：
 
 ```bash
@@ -97,14 +98,14 @@ cd ~/your_obsidian_vault
 git submodule add https://github.com/yourname/hexo-blog-source.git GitBlog
 ```
 
-##### 3.2 视觉净化 (File Explorer++)
+#### 3.2 视觉净化 (File Explorer++)
 为保持侧边栏纯净，仅显示文章目录，在 **File Explorer++** 插件的 **Hide Filter** 中设置以下正则：
 
 ```regex
 ^GitBlog/(?!(source/|source$)).*|^GitBlog/source/(?!(_posts/|_posts$)).*
 ```
 
-##### 3.3 其他配置 (可选)
+#### 3.3 其他配置 (可选)
 - Templater：配置给 _posts 下的文件自动加 `post front-matter`
 - Git：开启 **Submodule management**
 - Linter：把路径添加到 **Folders to ignore**
@@ -112,7 +113,7 @@ git submodule add https://github.com/yourname/hexo-blog-source.git GitBlog
 
 ---
 
-#### 4。极致写作流体验
+### 4。极致写作流体验
 
 1.  **撰写**：在 Obsidian 的 `GitBlog/source/_posts` 目录下直接新建 Markdown。
 2.  **提交**：保存后 **Obsidian Git** 插件自动进行 Push。
@@ -120,7 +121,7 @@ git submodule add https://github.com/yourname/hexo-blog-source.git GitBlog
 
 > 只要配置一次，余下的只有创作。
 
-#### 5。**Cloudflare Pages** 套 CDN + 自定义域名
+### 5。**Cloudflare Pages** 套 CDN + 自定义域名
 
 确保 Cloudflare 获得 Github 授权后，可以将静态仓库设为 **Private**。
 
@@ -135,7 +136,7 @@ git submodule add https://github.com/yourname/hexo-blog-source.git GitBlog
 
 ---
 
-##### 避坑
+#### 避坑
 
 **修复时区解析错误**
 若 Actions 报错 `TypeError: Cannot read properties of null (reading 'utcOffset')`，通常是由于未指定时区导致日期解析失败。
