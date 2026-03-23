@@ -13,7 +13,8 @@ image: https://image.heavenroad.org/Cover.png
 ---
 
 > 走过的弯路：2-5 其实不用看全是弯路
->
+> - [Obsidian自动化构建博客8-最终章](6.Blog/Obsidian自动化构建博客8-最终章.md)
+> - [Obsidian自动化构建博客8-最终章](posts/Obsidian自动化构建博客8-最终章.md)
 > - [Obsidian自动化构建博客6-插入图片](Obsidian自动化构建博客6-插入图片.md)
 > - [Obsidian自动化构建博客7-总结和插件配置](Obsidian自动化构建博客7-总结和插件配置.md)
 > - [Obsidian自动化构建博客8-最终章](Obsidian自动化构建博客8-最终章.md)
