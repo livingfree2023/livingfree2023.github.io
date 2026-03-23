@@ -1,11 +1,10 @@
 ---
-title: Obsidian自动化构建博客8-最终章
+title: Obsidian自动化构建博客7-简化
 category: Blog
 tags:
   - GitBlog
   - Obsidian
 published: 2026-03-22T20:37:00+08:00
-#slug: "20260322203700"
 draft: false
 image: https://image.heavenroad.org/resources/Pasted%20image%2020260322205640.png
 ---
