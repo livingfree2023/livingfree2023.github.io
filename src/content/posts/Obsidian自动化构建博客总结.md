@@ -96,7 +96,7 @@ description: ""
 tags:
   - 标签
 image: "" 如果有封面图就不能加引号，引号为了避免编译错误
-published: <% tp.date.now("YYYY-MM-DDTHH:MM:SS+08:00") %> 
+published: 2026-03-23T13:03:82+08:00 
 draft: false
 ---
 ```
