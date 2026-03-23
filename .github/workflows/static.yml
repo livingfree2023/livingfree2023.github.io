@@ -22,17 +22,18 @@ permissions:
 #  cancel-in-progress: false
 
 jobs:
+  deploy:
     strategy:
       matrix:
         node: [ 22, 23 ]
     runs-on: ubuntu-latest
     
   # Single deploy job since we're just deploying
-    deploy:
+  
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
+    
     steps:
       - name: Setup Node.js
         uses: actions/setup-node@cdca7365b2dadb8aad0a33bc7601856ffabcc48e # v4.3.0
