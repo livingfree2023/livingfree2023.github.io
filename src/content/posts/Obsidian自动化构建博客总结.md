@@ -11,45 +11,45 @@ image: https://image.heavenroad.org/resources/Pasted%20image%2020260322205756.pn
 ```mermaid
 graph
 
-    Start[Obsidian]
-    GitPlugin[Git插件]
-    ShellPlugin[shell command 插件]
-    subgraph Path1[无 VPS]
-        P1_ObidianGithub[GitHub Obsidian（私库）]
-        P1_Fuwari[Fuwari的fork（公库）]
-        P1_ObidianGithubAction[用Github Action</br> 监控blog目录并推送]
-        P1_Pages[GitHub Pages 编译部署<br/>xxx.github.io <br>DNS污染]
-        P1_Vercel[Vercel 编译部署<br/>xxx.vercel.app <br>DNS污染]
-        P1_CloudflarePage[Cloudflare Pages </br>编译部署</br>xxx.pages.dev <br>DNS污染]
-    end
+	Start[Obsidian]
+	GitPlugin[Git插件]
+	ShellPlugin[shell command 插件]
+	subgraph Path1[无 VPS]
+		P1_ObidianGithub[GitHub Obsidian（私库）]
+		P1_Fuwari[Fuwari的fork（公库）]
+		P1_ObidianGithubAction[用Github Action</br> 监控blog目录并推送]
+		P1_Pages[GitHub Pages 编译部署<br/>xxx.github.io <br>DNS污染]
+		P1_Vercel[Vercel 编译部署<br/>xxx.vercel.app <br>DNS污染]
+		P1_CloudflarePage[Cloudflare Pages </br>编译部署</br>xxx.pages.dev <br>DNS污染]
+	end
 
-    subgraph Path2[有 VPS]
-        P2_VPSGit[仓库在 VPS]
-        P2_VPSGitBuild[Post-Receive Hook</br> 触发 Build]
-        P2_Github[仓库在 Github]
-        P2_WatchGithub[contab 定时触发</br> Pull + Build]
-        P2_Fuwari[Fuwari Clone</br> VPS 编译部署]
-        P2_Caddy[Caddy/Nginx]
-        P2_LocalEnv[本地建 Fuwari Clone</br>软链接 blog 目录]
+	subgraph Path2[有 VPS]
+		P2_VPSGit[仓库在 VPS]
+		P2_VPSGitBuild[Post-Receive Hook</br> 触发 Build]
+		P2_Github[仓库在 Github]
+		P2_WatchGithub[contab 定时触发</br> Pull + Build]
+		P2_Fuwari[Fuwari Clone</br> VPS 编译部署]
+		P2_Caddy[Caddy/Nginx]
+		P2_LocalEnv[本地建 Fuwari Clone</br>软链接 blog 目录]
 
-        subgraph Manual[手动触发]
-            P2_Localbuild[手动触发本地编译]
-            P2_SSHbuild[手动触发推送<br>远程编译]
-            P2_Rsync[rsync 增量同步]
-        end
-    end
+		subgraph Manual[手动触发]
+			P2_Localbuild[手动触发本地编译]
+			P2_SSHbuild[手动触发推送<br>远程编译]
+			P2_Rsync[rsync 增量同步]
+		end
+	end
 
-    User[End User Browser]
+	User[End User Browser]
 
-    Start --> GitPlugin
-    Start --> ShellPlugin
-    GitPlugin -- 方案1 --> P1_ObidianGithub --> P1_ObidianGithubAction --> P1_Fuwari --> P1_Pages --> User
-    P1_Fuwari --> P1_CloudflarePage --> User
-    P1_Fuwari --> P1_Vercel --> User
-    GitPlugin -- 方案2 --> P2_VPSGit --> P2_VPSGitBuild --> P2_Fuwari --> P2_Caddy --> User
-    GitPlugin -- 方案3 --> P2_Github --> P2_WatchGithub --> P2_Fuwari
-    ShellPlugin -- 方案5 --> P2_LocalEnv --> P2_Localbuild --> P2_Rsync --> P2_Caddy
-    ShellPlugin -- 方案4 --> P2_SSHbuild --> P2_Fuwari
+	Start --> GitPlugin
+	Start --> ShellPlugin
+	GitPlugin -- 方案1 --> P1_ObidianGithub --> P1_ObidianGithubAction --> P1_Fuwari --> P1_Pages --> User
+	P1_Fuwari --> P1_CloudflarePage --> User
+	P1_Fuwari --> P1_Vercel --> User
+	GitPlugin -- 方案2 --> P2_VPSGit --> P2_VPSGitBuild --> P2_Fuwari --> P2_Caddy --> User
+	GitPlugin -- 方案3 --> P2_Github --> P2_WatchGithub --> P2_Fuwari
+	ShellPlugin -- 方案5 --> P2_LocalEnv --> P2_Localbuild --> P2_Rsync --> P2_Caddy
+	ShellPlugin -- 方案4 --> P2_SSHbuild --> P2_Fuwari
 ```
 
 ## 前提
