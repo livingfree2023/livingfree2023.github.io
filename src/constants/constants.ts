@@ -1,4 +1,5 @@
-export const PAGE_SIZE = 8;
+// export const PAGE_SIZE = 8;
+export const PAGE_SIZE = 100; // 100 posts per page in home page
 
 export const LIGHT_MODE = "light",
 	DARK_MODE = "dark",
