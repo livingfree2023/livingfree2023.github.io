@@ -145,5 +145,6 @@ rsync -avz --delete ./dist/ VPS_HOST:/var/www/html/blog/
 
 ## One more thing
 Obsidian 处理 markdown 链接和 astro 处理链接还是有区别
-比如从 `aaa.md` 添加 `bbb.md` 的链接，wikilink 写法是 `[[bbb.md]]`, markdown 的写法是 `[bbb](bbb.md)` 但是 `bbb.md` 这个笔记被 astro 编译后地址变成 `domain.com/posts/bbb/`, 这个链接指向被编译成 `domain.com/posts/aaa/bbb.md/` ，如果要保证编译后的地址正确，在 obsidian 中这个链接就没法正确跳转。两者不可兼得。这个问题应该不止 fuwari 有，所有 astro 都不会自动转化。
+比如从 `aaa.md` 添加 `bbb.md` 的链接，wikilink 写法是 `[[bbb.md]]`, markdown 的写法是 `[bbb](bbb.md)` 但是 `bbb.md` 这个笔记被 astro 编译后地址变成 `domain.com/posts/bbb/`, 这个链接指向被编译成 `domain.com/posts/aaa/bbb.md/` ，如果要保证编译后的地址正确，在 obsidian 中这个链接就没法正确跳转。两者不可兼得。
+这个问题应该不止 fuwari 有，所有 astro 都不会自动转化。
 有一个办法是使用 `static site MD exporter` 插件，并且为每个 post 指定一个 slug，插件可以扫描文章并且自动转化链接，然后直接 push 到一个指定的 git 仓库中。但是这个插件需要额外 1. 添加一个专用的 frontmatter 标记；2. 手动触发。Templater 可以直接把这两个 frontmatter 写到模板中，但手动触发现在没有好的办法。我评估 posts 内跳转的情况不多，如果需要的话，只好手动了。
