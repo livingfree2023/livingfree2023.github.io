@@ -1,8 +1,10 @@
 ---
 title: 水货三星 Z Flip 5刷机
-category: Blog
+category: 手机
 tags:
-  - GitBlog
+  - 手机
+  - 刷机
+  - 三星
 published: 2026-03-26T08:03:29+08:00
 image: https://image.heavenroad.org/default_cover.webp
 slug: 20260326_080329
