@@ -5,7 +5,7 @@ tags:
   - VPS
   - clash
 published: 2026-03-27T08:03:22+08:00
-image: https://image.heavenroad.org/default_cover.webp
+image: https://image.heavenroad.org/Pasted%20image%2020260327082423.png
 slug: slug20260327080322
 upload: false
 ---
@@ -122,4 +122,3 @@ Clash 的 url-test 可以请求一个返回响应 204 的 URL 测试节点的延
 #### https://http.cat/204
 
 #### https://httpbin.org/status/204
-
