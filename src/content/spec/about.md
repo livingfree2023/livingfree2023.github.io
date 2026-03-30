@@ -1,6 +1,15 @@
 # About
-This is the demo site for [Fuwari](https://github.com/saicaca/fuwari).
 
+全平台客户端推荐
+::github{repo="appshubcc/Bettbox"}
+服务器一键脚本推荐
+::github{repo="zxcvos/Xray-script"}
+
+
+鸣谢
+::github{repo="XTLS/Xray-core"}
+
+Site Template 
 ::github{repo="saicaca/fuwari"}
 
 > ### Sources of images used in this site

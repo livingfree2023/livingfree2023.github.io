@@ -43,7 +43,7 @@ export const navBarConfig: NavBarConfig = {
 	links: [
 		LinkPreset.Home,
 		LinkPreset.Archive,
-		LinkPreset.About,
+		// LinkPreset.About,
 		{
 			name: "NodeSeek",
 			url: "https://www.nodeseek.com",
