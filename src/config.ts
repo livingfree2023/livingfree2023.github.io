@@ -49,6 +49,11 @@ export const navBarConfig: NavBarConfig = {
 			url: "https://www.nodeseek.com",
 			external: true, // Show an external link icon and will open in a new tab
 		},
+		{
+			name: "NodeImage",
+			url: "https://www.nodeimage.com",
+			external: true, // Show an external link icon and will open in a new tab
+		},
 	],
 };
 
