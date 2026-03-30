@@ -1,6 +1,5 @@
 ---
-title: Obsidian自动化构建博客2-迁移Astro
-description: 记录一次从传统 Hexo 框架向现代 Astro 框架的完整迁移过程。
+title: Obsidian自动化构建博客2-Astro
 published: 2026-03-19T18:00:00+08:00
 category: Blog
 tags:
@@ -9,7 +8,6 @@ tags:
   - Blog
 draft: false
 image: https://image.heavenroad.org/resources/Pasted%20image%2020260322210444.png
-#slug: "20260319010002"
 ---
 
 > [!TIP]
