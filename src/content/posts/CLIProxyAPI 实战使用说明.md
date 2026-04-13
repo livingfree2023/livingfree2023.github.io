@@ -9,7 +9,7 @@ published: 2026-04-13T19:04:25+08:00
 image: https://image.heavenroad.org/Pasted%20image%2020260413195126.png
 slug: slug20260413190425
 upload: false
-Last Modified: 2026-04-13 19:04:62
+Last Modified: 2026-04-13 19:04:39
 ---
 
 ## 1. 配置详细解说
@@ -135,7 +135,6 @@ gemini-web:
     code-mode: false
 ```
 
-
 ---
 
 ## 2. 项目介绍 +Qwen 实战
@@ -182,7 +181,7 @@ CLIProxyAPI 是一款使用 Go 语言编写的开源 AI 代理工具。也许是
 
 -   **极低的资源消耗**。值得一提的是，该程序对系统资源的消耗极低。程序本身仅 10MB 左右，启动时内存占用不到 10MB，长时间峰值内存占用也仅有 100MB 左右，几乎任何电脑都能流畅运行。
 
-程序的使用非常简单。官方不仅提供了适用于各平台的二进制文件和 Docker 部署方式，还提供了 EasyCLI 和 WebUI，对新手十分友好。所有设置均通过 `config.yaml` 配置文件管理，且支持热重载——修改配置后即时生效，无需重启程序。完整的配置项解说详见 [手把手带你用上AI神器 - CLIProxyAPI（配置详细解说）](https://lostip.de/blog/975888197/)。
+程序的使用非常简单。官方不仅提供了适用于各平台的二进制文件和 Docker 部署方式，还提供了 EasyCLI 和 WebUI，对新手十分友好。所有设置均通过 `config.yaml` 配置文件管理，且支持热重载——修改配置后即时生效，无需重启程序。
 
 ### **实战教程：转换 Qwen Code 为 API Key**
 
@@ -374,7 +373,6 @@ CLIProxyAPI 是一款使用 Go 语言编写的开源 AI 代理工具。也许是
  ![](https://image.heavenroad.org/c07a3dbd57f728186ad835fa5afdde6d.png)
 
  至此，所有模型都已成功集成。你学会了吗？
-
 
 ---
 
