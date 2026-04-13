@@ -135,8 +135,6 @@ gemini-web:
     code-mode: false
 ```
 
-如果在配置或使用过程中遇到任何问题，欢迎加入官方社群进行交流咨询，作者很热情很 Nice 哟~
-QQ 群：`188637136` | Telegram 群：[https://t.me/CLIProxyAPI](https://t.me/CLIProxyAPI)
 
 ---
 
@@ -377,8 +375,6 @@ CLIProxyAPI 是一款使用 Go 语言编写的开源 AI 代理工具。也许是
 
  至此，所有模型都已成功集成。你学会了吗？
 
- 如果在配置或使用过程中遇到任何问题，欢迎加入官方社群进行交流咨询，作者很热情很 Nice 哟~
- QQ 群：`188637136` | Telegram 群：[https://t.me/CLIProxyAPI](https://t.me/CLIProxyAPI)
 
 ---
 
