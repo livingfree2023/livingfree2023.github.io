@@ -750,8 +750,8 @@ Gemini-CLI、Claude 和 Codex 的 OAuth 认证都需要一个“回调”（Call
 
 如果在配置或使用过程中遇到任何问题，欢迎加入官方社群进行交流咨询，作者很热情很 Nice 哟~
 
-> [!note] 转载自
-> @hkfires 发布于 9/29/2025, 11:09:36 AM，编辑于 9/29/2025, 11:13:04 AM
+> [!note] 
+> 转载自@hkfires 发布于 9/29/2025, 11:09:36 AM，编辑于 9/29/2025, 11:13:04 AM
 >
 > - [手把手带你用上AI神器 - CLIProxyAPI（零：配置详细解说）](https://www.nodeseek.com/post-464540-1)
 > - [手把手带你用上AI神器 - CLIProxyAPI（壹：项目介绍+Qwen实战）](https://www.nodeseek.com/post-464541-1)
