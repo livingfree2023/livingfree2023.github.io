@@ -6,10 +6,10 @@ tags:
   - CPA
   - CLIProxyAPI
 published: 2026-04-13T19:04:25+08:00
-image: https://image.heavenroad.org/default_cover.webp
+image: https://image.heavenroad.org/Pasted%20image%2020260413195126.png
 slug: slug20260413190425
 upload: false
-Last Modified: 2026-04-13 19:04:40
+Last Modified: 2026-04-13 19:04:62
 ---
 
 ## 1. 配置详细解说
