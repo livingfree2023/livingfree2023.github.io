@@ -1,6 +1,6 @@
 ---
 name: bible-study
-description: Create Obsidian-ready introductory study guides for Bible books and add ebible.org links to scripture references in requested Markdown articles in this blog directory. Use for book overviews, backgrounds, key verses, or scripture-linking requests.
+description: Create Obsidian-ready Bible book study guides with BibleProject Chinese posters and videos, and add ebible.org links to scripture references in requested Markdown articles in this blog directory. Use for book overviews, backgrounds, key verses, or scripture-linking requests.
 ---
 
 # Bible study
@@ -9,22 +9,51 @@ Use the part of this workflow that matches the request: write a new book overvie
 
 ## Book overview
 
-Produce a complete, standalone Markdown study guide for the named Bible book. If the user asks for chat output, return the document itself without conversational framing, truncation, or placeholders. If the user asks for a file, save the document at the requested location; when writing into this blog directory, follow an established article's frontmatter if its publishing fields are required, while retaining the study metadata below where compatible.
+Produce a complete, standalone Markdown study guide for the named Bible book. If the user asks for chat output, return the document itself without conversational framing, truncation, or placeholders. If the user asks for a file, save it at the requested location. For a new article in this blog directory, use the frontmatter and media placement exemplified by `玛拉基书.md`; for an existing article, preserve its unrelated metadata.
 
 Use Simplified Chinese by default throughout headings, analysis, and scripture quotations. Follow an explicit language request throughout the whole document. Do not alternate Chinese and English prose or use slash-separated bilingual labels unless the user requests bilingual text. Use CUVS for Chinese scripture quotations and NASB for English quotations; verify the exact wording against an authorized source and identify the translation. Never reconstruct a quotation from memory. If the requested translation cannot be verified or reproduced within applicable quote limits, cite and paraphrase accurately rather than inventing text.
 
-Default document structure (translate the headings and labels into natural English for an English guide):
+### BibleProject poster and video
+
+For a study guide about a specific Bible book, look up that book on `https://bibleproject.com/zh-hans/`. Match the Chinese book title and check whether BibleProject presents one video, multiple parts, or a combined-book video. Use the site's **海报** link for the `image` field and its **下载** link for the video source. Use the direct poster image URL and direct MP4 stream URL, not the site's homepage or a YouTube page. A download-only query string may be removed from the MP4 URL so the `<video>` element can play it. Do not invent, hardcode for other books, or reuse another book's media URLs.
+
+For a new blog article, model the YAML header on `玛拉基书.md`: `title` is the book name, `category` is `宗教`, `tags` include the book name and study tags, `published` is the actual creation time in a valid ISO timestamp, `image` is the verified BibleProject poster URL, `slug` is a unique value following the directory convention, and `upload` is `false`; keep `aliases` when useful. Do not copy Malachi's timestamp, slug, poster, or video into another book. For an existing article, update only the relevant `image` field and media block unless the user asks to revise other metadata.
+
+Place the video immediately after the YAML header and before the book heading, using the same HTML form as `玛拉基书.md`:
+
+```html
+<video width="100%" height="468" controls>
+  <source src="VERIFIED_MP4_URL" type="video/mp4">
+  您的浏览器不支持 video 标签。
+</video>
+```
+
+Translate the fallback sentence for an English guide. For a book with multiple video parts, place one block per part in BibleProject's order; use the book's matching poster in `image`. If the site offers only a combined-book video, use it only when it clearly covers the requested book. If a poster or playable MP4 is unavailable, omit the missing field or block rather than insert a placeholder; preserve any existing unrelated image. Check that each selected URL belongs to the requested book and that the Markdown contains valid YAML and video HTML.
+
+Default document structure (translate the headings and labels into natural English for an English guide; use the blog header above for new articles in this directory):
 
 ```markdown
 ---
+title: 中文书卷名
+category: 宗教
 tags:
+  - 中文书卷名
   - bible-study
   - old-testament OR new-testament
   - appropriate-genre-tag
 aliases:
   - 中文书卷名
   - English Book Name
+published: ACTUAL_ISO_TIMESTAMP
+image: VERIFIED_BIBLEPROJECT_POSTER_URL
+slug: UNIQUE_BLOG_SLUG
+upload: false
 ---
+
+<video width="100%" height="468" controls>
+  <source src="VERIFIED_MP4_URL" type="video/mp4">
+  您的浏览器不支持 video 标签。
+</video>
 
 # 中文书卷名
 
