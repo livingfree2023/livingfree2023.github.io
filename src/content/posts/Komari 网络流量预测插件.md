@@ -1,13 +1,12 @@
 ---
 title: Komari 网络流量预测插件
-category: Blog
+category: Tech
 tags:
-  - GitBlog
   - AI
   - VPS
 published: 2026-10-08T11:35:08+08:00
 image: https://github.com/livingfree2023/Komari-Plugin-NetForecast/raw/main/assets/preview.svg
-slug: "slug20261008113509"
+slug: slug20261008113509
 upload: false
 ---
 
