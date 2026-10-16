@@ -36,16 +36,17 @@ upload: false
 7. 无法获取 warp-ip
 	1. **结论**：反复尝试 warp 后被禁用了，不折腾了
 8. 活了，又死了
-	1. **warp 官方客户端直接双栈**： 复活，fast测速1G，youtube 20w
-	2. **避坑**：犹豫还想搞清楚warp的v6如果走默认会不会比本身的更快，把v6默认路由写成了warp，然后机器就失联了，因为我ssh上去的是原v6，而warp v6只出不进
-	```
+	1. **warp 官方客户端直接双栈**： 复活，fast 测速 1G，youtube 20w
+	2. **避坑**：犹豫还想搞清楚 warp 的 v6 如果设成默认会不会比本身的更快，把 v6 默认路由写成了 warp，然后机器就失联了，因为我 ssh 上去的是原 v6，而 warp v6 只出不进
+	```bash
 	ip -6 route replace default dev CloudflareWARP
-Read from remote host [原v6] Operation timed out
-Connection to [原v6] closed.
+Read from remote host [原 v6] Operation timed out
+Connection to [原 v6] closed.
 client_loop: send disconnect: Broken pipe
 	```
-	3. **求助vnc+gemini**：复活
+	3. **求助vnc**：复活
+	```bash
+	sudo ip -6 route add [原 v6 网段]/64 dev eth0
+	sudo ip -6 route replace default via [原 v6 网关] dev eth0
 	```
-	sudo ip -6 route add [原v6网段]/64 dev eth0
-	sudo ip -6 route replace default via [原v6网关] dev eth0
-	```
+	4. **结论**：warp 的 v6 地址无用，因为没有路由，如果让路由走原 v6，那对性能毫无意义。不要瞎折腾。
