@@ -35,3 +35,17 @@ upload: false
 	1. **结论**：youtube 速度 3w
 7. 无法获取 warp-ip
 	1. **结论**：反复尝试 warp 后被禁用了，不折腾了
+8. 活了，又死了
+	1. **warp 官方客户端直接双栈**： 复活，fast测速1G，youtube 20w
+	2. **避坑**：犹豫还想搞清楚warp的v6如果走默认会不会比本身的更快，把v6默认路由写成了warp，然后机器就失联了，因为我ssh上去的是原v6，而warp v6只出不进
+	```
+	ip -6 route replace default dev CloudflareWARP
+Read from remote host [原v6] Operation timed out
+Connection to [原v6] closed.
+client_loop: send disconnect: Broken pipe
+	```
+	3. **求助vnc+gemini**：复活
+	```
+	sudo ip -6 route add [原v6网段]/64 dev eth0
+	sudo ip -6 route replace default via [原v6网关] dev eth0
+	```
