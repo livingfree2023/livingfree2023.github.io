@@ -38,14 +38,16 @@ upload: false
 8. 活了，又死了
 	-  **warp 官方客户端直接双栈**： 复活，fast 测速 1G，youtube 20w
 	-  **避坑**：犹豫还想搞清楚 warp 的 v6 如果设成默认会不会比本身的更快，把 v6 默认路由写成了 warp，然后机器就失联了，因为我 ssh 上去的是原 v6，而 warp v6 只出不进
+
 	```bash
 	ip -6 route replace default dev CloudflareWARP
-Read from remote host [原 v6] Operation timed out
-Connection to [原 v6] closed.
-client_loop: send disconnect: Broken pipe
+	Read from remote host [原 v6] Operation timed out
+	Connection to [原 v6] closed.
+	client_loop: send disconnect: Broken pipe
 	```
 
-	-  **求助vnc**：复活
+	-  **求助 vnc**：复活
+
 	```bash
 	sudo ip -6 route add [原 v6 网段]/64 dev eth0
 	sudo ip -6 route replace default via [原 v6 网关] dev eth0
