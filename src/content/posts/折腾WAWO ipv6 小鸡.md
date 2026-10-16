@@ -48,5 +48,7 @@ client_loop: send disconnect: Broken pipe
 	```bash
 	sudo ip -6 route add [原 v6 网段]/64 dev eth0
 	sudo ip -6 route replace default via [原 v6 网关] dev eth0
+## 复活后还需要修复 warp 路由
+	warp-cli tunnel ip remove-range 0.0.0.0/0
 	```
 	4. **结论**：warp 的 v6 地址无用，因为没有路由，如果让路由走原 v6，那对性能毫无意义。不要瞎折腾。
