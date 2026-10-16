@@ -49,9 +49,9 @@ upload: false
 	-  **求助 vnc**：复活
 
 	```bash
-	sudo ip -6 route add [原 v6 网段]/64 dev eth0
+	sudo ip -6 route add  v6_网段/64 dev eth0
 	sudo ip -6 route replace default via [原 v6 网关] dev eth0
-## 复活后还需要修复 warp 路由
+	## 复活后还需要修复 warp 路由
 	warp-cli tunnel ip remove-range 0.0.0.0/0
 	```
 	
