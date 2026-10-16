@@ -41,18 +41,18 @@ upload: false
 
 	```bash
 	ip -6 route replace default dev CloudflareWARP
-	Read from remote host [原 v6] Operation timed out
-	Connection to [原 v6] closed.
+	Read from remote host 原_V6_IP Operation timed out
+	Connection to 原_V6_IP closed.
 	client_loop: send disconnect: Broken pipe
 	```
 
 	-  **求助 vnc**：复活
 
 	```bash
-	sudo ip -6 route add  v6_网段/64 dev eth0
-	sudo ip -6 route replace default via [原 v6 网关] dev eth0
+	sudo ip -6 route add  V6_网段/64 dev eth0
+	sudo ip -6 route replace default via 原_V6_网关 dev eth0
 	## 复活后还需要修复 warp 路由
 	warp-cli tunnel ip remove-range 0.0.0.0/0
 	```
-	
+
 	-  **结论**：warp 的 v6 地址无用，因为没有路由，如果让路由走原 v6，那对性能毫无意义。不要瞎折腾。
