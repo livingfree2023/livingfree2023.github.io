@@ -133,6 +133,7 @@ server {
 
 ```
 :56780 {
+	header /generate_204 { Cache-Control "no-store, no-cache, must-revalidate" }
     respond /generate_204 204
     respond 404
 }
