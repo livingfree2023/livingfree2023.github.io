@@ -66,7 +66,7 @@ proxy-groups:
   # 香港：自建 + 机场，自动容灾
   - name: "HK-Auto"
     type: url-test # 如果希望优先自建，这里可以改成fallback，如果希望流量分摊，这里填 load-balance
-    url: https://www.落地鸡.com/generate_204 # 这里可以改写落地的服务器generate_204
+    url: http://落地鸡的web服务/generate_204 # 这里可以改写落地的服务器generate_204
     interval: 300
     tolerance: 50
     proxies:
@@ -100,3 +100,40 @@ proxies:
 ```
 
 ## 三、自建generate_204提供真实测速
+
+默认使用 Google 的 `generate_204` 测试的是“节点直连 Google CDN 边缘节点”的时延，无法真实反映到目标业务服务器或自建落地的端到端质量。
+
+通过在自建落地机上搭建轻量 HTTP 204 端点，并将 `proxy-groups` 内的 `url` 改向该服务，能精确衡量“客户端 $\to$ 机场中继 $\to$ 落地机”整条链路的真实可用性与往返延迟。
+
+### 1. Nginx 配置示例
+
+```
+server {
+    listen 56780;
+    listen [::]:56780;
+
+    location /generate_204 {
+        # 禁用缓存，确保每次探测触发真实网络请求
+        add_header Cache-Control "no-cache, no-store, must-revalidate";
+        add_header Pragma "no-cache";
+        expires 0;
+        
+        # 核心指令：直接响应 204 且不携带 body
+        return 204;
+    }
+
+    # 其余路径直接阻断，降低被扫描利用风险
+    location / {
+        return 404;
+    }
+}
+```
+
+### 2. Caddy 配置示例
+
+```
+:56780 {
+    respond /generate_204 204
+    respond 404
+}
+```
