@@ -78,7 +78,8 @@ proxy-groups:
 	  - 机场2
       - 机场3
     # 也可以直接用 include-all，就用所有机场所有节点进行筛选
-    # include-all: true
+    # include-all: true # 必须同时exclude掉你的落地鸡，否则可能会死循环！
+    # exclude-filter: "亚太自建落地"
     filter: "(?i)港|hk|hongkong" # 避免用emoji筛选（有的看着一样但是代码不一样）
 ```
 
