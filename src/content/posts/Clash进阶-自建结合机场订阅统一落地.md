@@ -8,7 +8,7 @@ tags:
   - 落地
   - 链式代理
 published: 2026-11-02T18:30:41-08:00
-image: https://image.heavenroad.org/default_cover.webp
+image: https://image.heavenroad.org/Clash%E8%BF%9B%E9%98%B6-%E8%87%AA%E5%BB%BA%E7%BB%93%E5%90%88%E6%9C%BA%E5%9C%BA%E8%AE%A2%E9%98%85%E7%BB%9F%E4%B8%80%E8%90%BD%E5%9C%B0-1.webp
 slug: slug20261102183111
 upload: false
 ---
@@ -23,9 +23,7 @@ upload: false
 
 ## 拓扑设计
 
-```
-
-```
+![](https://image.heavenroad.org/Clash%E8%BF%9B%E9%98%B6-%E8%87%AA%E5%BB%BA%E7%BB%93%E5%90%88%E6%9C%BA%E5%9C%BA%E8%AE%A2%E9%98%85%E7%BB%9F%E4%B8%80%E8%90%BD%E5%9C%B0-1.webp)
 
 ## 一、架构设计：单 Provider 多 Group 动态过滤
 
