@@ -73,24 +73,23 @@ proxy-groups:
       - "自建线路HK1"
 	  - "自建线路HK2"
       - "自建线路HK3"
-    use:
+    use: 
       - 机场1
 	  - 机场2
       - 机场3
-    filter: "(?i)港|hk|hongkong"
+    # 也可以直接用 include-all，就用所有机场所有节点进行筛选
+    # include-all: true
+    filter: "(?i)港|hk|hongkong" # 避免用emoji筛选（有的看着一样但是代码不一样）
 ```
 
 ### 2. 链式代理：机场专线前置 + 自建落地 (Dialer-Proxy)
 
-利用商业机场优质的国内入口与跨境专线作为 Relay，以自建 VPS 的纯净住宅/机房 IP 作为 Exit。
+使用 `dialer-proxy` 绑定一个上游策略组 `HK-Auto`。
 
-在 Mihomo / Meta 核心下，无需使用老旧且难以分流的 `relay` 组类型，直接在自建节点配置中使用 `dialer-proxy` 绑定一个上游策略组（例如直接挂载上述配置好的 `HK-Auto`）。
 
-YAML
 
-```
+```YAML
 proxies:
-  # 出口端：自建纯净落地节点
   # 流量流向：Client -> HK-Auto(机场前置节点) -> Self-HK-Chain(自建出口) -> Target
   - name: "亚太自建落地"
     type: ss
@@ -99,7 +98,7 @@ proxies:
 
 ```
 
-## 三、自建generate_204提供真实测速
+## 三、自建 generate_204 提供真实测速
 
 默认使用 Google 的 `generate_204` 测试的是“节点直连 Google CDN 边缘节点”的时延，无法真实反映到目标业务服务器或自建落地的端到端质量。
 
