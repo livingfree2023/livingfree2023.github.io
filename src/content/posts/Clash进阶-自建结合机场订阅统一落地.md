@@ -86,15 +86,13 @@ proxy-groups:
 
 使用 `dialer-proxy` 绑定一个上游策略组 `HK-Auto`。
 
-
-
 ```YAML
 proxies:
-  # 流量流向：Client -> HK-Auto(机场前置节点) -> Self-HK-Chain(自建出口) -> Target
+  # 流量流向：客户端 -> HK-Auto -> 亚太自建落地 -> Target
   - name: "亚太自建落地"
-    type: ss
-    【其他省略】
-    dialer-proxy: "HK-Auto"
+    type: ss # 也可以是别的协议，有没有tls都行，甚至socks
+    #【配置省略】
+    dialer-proxy: "HK-Auto" # 关键点
 
 ```
 
@@ -102,7 +100,7 @@ proxies:
 
 默认使用 Google 的 `generate_204` 测试的是“节点直连 Google CDN 边缘节点”的时延，无法真实反映到目标业务服务器或自建落地的端到端质量。
 
-通过在自建落地机上搭建轻量 HTTP 204 端点，并将 `proxy-groups` 内的 `url` 改向该服务，能精确衡量“客户端 $\to$ 机场中继 $\to$ 落地机”整条链路的真实可用性与往返延迟。
+通过在自建落地机上搭建轻量 HTTP 204 端点，并将 `proxy-groups` 内的 `url` 改向该服务，能精确衡量“客户端 $\to$ 机场中继 $\to$ 落地机”整条链路的真实可用性与往返延迟。可以用任意端口，不需要套 ssl 证书
 
 ### 1. Nginx 配置示例
 
